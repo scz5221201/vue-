@@ -1,4 +1,4 @@
-# vcustomers
+# vuepro
 
 > A Vue.js project
 

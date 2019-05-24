@@ -1,7 +1,7 @@
 <template>
-  <div class="Add container">
+  <div class="edit container">
     <h1 class="page-header">添加用户</h1>
-    <form v-on:submit="addCustomers">
+    <form v-on:submit="updateCustomers">
       <div class="well">
         <h4>用户信息</h4>
         <div class="form-group">
@@ -22,7 +22,12 @@
         </div>
         <div class="form-group">
           <label>毕业学校</label>
-          <input type="text" class="form-control" placeholder="毕业学校" v-model="customer.graduationSchool">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="毕业学校"
+            v-model="customer.graduationSchool"
+          >
         </div>
         <div class="form-group">
           <label>职业</label>
@@ -41,30 +46,31 @@
 <script>
 export default {
   name: 'Add',
-  data () {
+  data() {
     return {
-      customer:{}
+      customer: {}
     }
   },
-  methods:{
-    addCustomers(e){
-      if(!this.customer.name || !this.customer.phone || !this.customer.email){
+  methods: {
+    updateCustomers(e) {
+      if (!this.customer.name || !this.customer.phone || !this.customer.email) {
         alert("请输入对应的信息")
-      }else{
-        let newCustomer={
-          name:this.customer.name,
-          phone:this.customer.phone,
-          email:this.customer.email,
-          education:this.customer.education,
-          graduationSchool:this.customer.graduationSchool,
-          profession:this.customer.profession,
-          profile:this.customer.profile
+      } else {
+        let updateCustomers = {
+          name: this.customer.name,
+          phone: this.customer.phone,
+          email: this.customer.email,
+          education: this.customer.education,
+          graduationSchool: this.customer.graduationSchool,
+          profession: this.customer.profession,
+          profile: this.customer.profile
         }
-        this.$http.post("http://localhost:3000/user", newCustomer)
-            .then(function(response){
-              alert("添加成功")
-              this.$router.push({path:"/"})
-            })
+
+        this.$http.put("http://localhost:3000/user/" + this.$route.params.id, updateCustomers)
+          .then(function (response) {
+
+            this.$router.push({ path: "/", query: { alertInfo: "用户信息更新成功" } })
+          })
         e.preventDefault();
       }
       e.preventDefault();
@@ -75,5 +81,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 </style>

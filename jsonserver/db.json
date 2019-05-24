@@ -1,30 +1,6 @@
 {
   "user": [
     {
-      "name": "helo",
-      "phone": "110",
-      "email": "1@qq.com",
-      "id": 1,
-      "age": 10,
-      "companyId": 1
-    },
-    {
-      "name": "hello",
-      "phone": "119",
-      "email": "2@qq.com",
-      "id": 2,
-      "age": 20,
-      "companyId": 2
-    },
-    {
-      "name": "hellLo",
-      "phone": "120",
-      "email": "3@qq.com",
-      "id": 3,
-      "age": 30,
-      "companyId": 3
-    },
-    {
       "name": "helLLlo",
       "phone": "12345",
       "email": "4@qq.com",
@@ -33,13 +9,13 @@
       "companyId": 3
     },
     {
-      "name": "1",
-      "phone": "1",
-      "email": "1",
-      "education": "1",
-      "graduationSchool": "1",
-      "profession": "1",
-      "profile": "1",
+      "name": "3",
+      "phone": "3",
+      "email": "3",
+      "education": "3",
+      "graduationSchool": "3",
+      "profession": "3",
+      "profile": "3",
       "id": 5
     },
     {
@@ -51,6 +27,16 @@
       "profession": "2",
       "profile": "2",
       "id": 6
+    },
+    {
+      "name": "1",
+      "phone": "1",
+      "email": "1",
+      "education": "1",
+      "graduationSchool": "1",
+      "profession": "1",
+      "profile": "1",
+      "id": 7
     }
   ],
   "companies": [

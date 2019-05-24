@@ -1,5 +1,5 @@
 {
-  "name": "vcustomers",
+  "name": "vuepro",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "scz5221201 <527576805@qq.com>",
@@ -12,7 +12,7 @@
   "dependencies": {
     "vue": "^2.5.2",
     "vue-resource": "^1.5.1",
-    "vue-router": "3.0.6"
+    "vue-router": "^3.0.6"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
